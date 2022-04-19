@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Project/Maven2/JavaApp/src/main/java/${packagePath}/${mainClassName}.java to edit this template
- */
+
 package com.mycompany.miniSearchEngine;
 
 import java.io.File;
@@ -18,7 +15,7 @@ public class Test {
     public static void main(String[] args) throws IOException {
 
         ignoreList.createIgnoreList();
-        String sourceDirectory = "C:\\Users\\numan.kilincoglu\\Desktop\\MiniSearchEngine\\src\\main\\java\\com\\mycompany\\srcFiles\\files";
+        String sourceDirectory = "Source File Directory";
         File file = new File(sourceDirectory);
         doThings(file);
     }
@@ -30,7 +27,7 @@ public class Test {
                 BNTree<String> tree = new BNTree<>();
                 tree.createTree(ignoreList, listFile);
                 String fileName = listFile.getName().replace(".html", "result.txt");
-                String path = "C:\\Users\\numan.kilincoglu\\Desktop\\MiniSearchEngine\\src\\main\\java\\com\\mycompany\\srcFiles\\results\\" + fileName;
+                String path = "Output File Directory;
                 tree.deleteFiles(path);
                 tree.preorderTree(path);
             }
